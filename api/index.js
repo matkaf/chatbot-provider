@@ -21,7 +21,7 @@ app.get('/', async (_req, res) => {
     const dict = arrayToDict(c_oldest_five);
 
 
-    res.status(200).json({ repos: dict });
+    res.status(200).json(dict);
   } catch (error) {
     console.log(error.message);
     res.status(400).json('Communication error with GitHub API');
