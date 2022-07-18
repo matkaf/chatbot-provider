@@ -1,0 +1,27 @@
+{
+  "name": "chatbot-provider",
+  "version": "1.0.0",
+  "description": "Essa API alimenta um chatbot, utilizando a API pública do GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matkaf/chatbot-provider.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matkaf/chatbot-provider/issues"
+  },
+  "homepage": "https://github.com/matkaf/chatbot-provider#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.20.0"
+  }
+}
