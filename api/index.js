@@ -2,6 +2,8 @@ const axios = require('axios');
 const express = require('express');
 const cors = require('cors');
 
+const arrayToDict = require('./helpers/arrayToDict');
+
 const app = express();
 
 app.use(cors());
@@ -14,15 +16,12 @@ app.get('/', async (_req, res) => {
   try {
     const { data } = await axios.get('http://api.github.com/orgs/takenet/repos');
 
-    const c_oldest_five = data.filter((repo) => repo.language === 'C#')
-      .slice(0, 5)
-      .map(({ owner, full_name, description }) => ({
-        avatar: owner.avatar_url,
-        full_name,
-        description
-      }));
+    const c_oldest_five = data.filter((repo) => repo.language === 'C#').slice(0, 5);
 
-    res.status(200).json(c_oldest_five);
+    const dict = arrayToDict(c_oldest_five);
+
+
+    res.status(200).json({ repos: dict });
   } catch (error) {
     console.log(error.message);
     res.status(400).json('Communication error with GitHub API');
