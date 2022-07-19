@@ -18,11 +18,13 @@ Essa API alimenta o chatbot construído para o teste técnico da Take Blip. Ele 
   └──🔸index.js
   ```
 
-## Funcionamento da API
+## :rocket: Funcionamento da API
 
 :computer: **API Live**: https://chatbot-provider.herokuapp.com/
 
-Para acessar a API basta clicar no link acima. A resposta vem no formato JSON, contendo um objeto pai com 5 objetos dentro no formato **dictionary** (padrão que se encaixa no funcionamento do chatbot). Esses objetos possuem a seguinte estrutura, ordenados pela data de criação do repositório, em ordem crescente (mais antigo para o mais novo):
+Para acessar a API basta clicar no link acima. Ela possui apenas uma rota, no método `GET`, que retorna os 5 (cinco) repositórios solicitados no teste. A resposta vem no formato JSON, contendo um objeto pai com 5 objetos dentro no formato **dictionary** (padrão que se encaixa no funcionamento do chatbot).
+
+Esses objetos estão ordenados pela data de criação do repositório, em ordem crescente (mais antigo para o mais novo) e possuem a seguinte estrutura :
 
 ```js
 {
@@ -40,3 +42,4 @@ Para acessar a API basta clicar no link acima. A resposta vem no formato JSON, c
 }
 ```
 
+:rocket: Desenvolvido por: [Matheus Kaffka](https://www.linkedin.com/in/matheus-kaffka/)
